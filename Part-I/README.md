@@ -10,13 +10,13 @@ The plan was to use `sieve.c` but the makefile gave a lot of bt. So, I just ripp
 
 ## Usage
 
-1. Add the `sieve_config.py` to the directory `~/gem5/config/new_directory/`.
+1. Add the `sieve_config.py` to the directory `~/gem5/config/gem5_101/hw1`.
 
-2. Add the `Makefile` and `sieve.cpp` to `~/gem5/tests/test-progs/sieve/src/`. And make  a directory `../sieve/bin`. 
+2. Add the `Makefile` and `sieve.cpp` to `~/gem5/tests/test-progs/`. And make  a directory `../sieve/bin`. 
 
 3. Open terminal at `src` and execute the makefile
 ```shell
-$ make -f Makefile
+$ make
 ```
 Your output should be: 
 ```shell
