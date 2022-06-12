@@ -14,7 +14,7 @@ The plan was to use `sieve.c` but the makefile gave a lot of bt. So, I just ripp
 
 2. Add the `Makefile` and `sieve.cpp` to `~/gem5/tests/test-progs/`. And make  a directory `../sieve/bin`. 
 
-3. Open terminal at `src` and execute the makefile
+3. Open terminal at `bin` and execute the makefile
 ```shell
 $ make
 ```
@@ -24,9 +24,15 @@ g++ -o ../bin/sieve sieve.cpp -pthread -std=c++17
 ```
 Now the `/bin` directory will have the binaries of `sieve.cpp`.
 
+3.build by ARM
+```shell
+$ scons build/ARM/gem5.opt
+```
+只有在ARM下才可以使用system.cpu=MinorCPU()
+
 4. Now, execute the following command at location `~/gem5`.
 ```shell
-$ build/X86/gem5.opt configs/new_directory/sieve_config.py --l2_size='2MB' --l1d_size='512kB' --l1i_size='512kB'
+$ build/X86/gem5.opt configs/new_directory/sieve_config.py --l2_size='2MB' --l1d_size='512kB' --l1i_size='512kB' --clk_fre='3GHz'
 ```
 This should successfully run and the output should be something like
 ```shell
