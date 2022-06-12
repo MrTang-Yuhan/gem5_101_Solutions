@@ -28,7 +28,8 @@ Now the `/bin` directory will have the binaries of `sieve.cpp`.
 ```shell
 $ scons build/ARM/gem5.opt
 ```
-只有在ARM下才可以使用system.cpu=MinorCPU()
+system.cpu=MinorCPU()好像在X86下无法使用？
+但是这样修改后，sieve又用不了了。
 
 4. Now, execute the following command at location `~/gem5`.
 ```shell
